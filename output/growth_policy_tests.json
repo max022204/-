@@ -1,0 +1,106 @@
+{
+  "passed": 25,
+  "engine_tested": false,
+  "tests": [
+    {
+      "test": "Exact 2.5x threshold qualifies",
+      "passed": true
+    },
+    {
+      "test": "Each component independently required: hp",
+      "passed": true
+    },
+    {
+      "test": "Each component independently required: attack",
+      "passed": true
+    },
+    {
+      "test": "Each component independently required: armor",
+      "passed": true
+    },
+    {
+      "test": "Zero enemy armor imposes no extra requirement",
+      "passed": true
+    },
+    {
+      "test": "Multiplier is on AI, not enemy: 2.0",
+      "passed": true
+    },
+    {
+      "test": "Multiplier is on AI, not enemy: 3.0",
+      "passed": true
+    },
+    {
+      "test": "Opening delivery 0 precedes shopping",
+      "passed": true
+    },
+    {
+      "test": "Opening delivery 1 precedes shopping",
+      "passed": true
+    },
+    {
+      "test": "Full bottle submitted before spending",
+      "passed": true
+    },
+    {
+      "test": "Empty bottle trip continues before spending",
+      "passed": true
+    },
+    {
+      "test": "Level 14 cannot enter rooms",
+      "passed": true
+    },
+    {
+      "test": "Level deficit routes to XP room",
+      "passed": true
+    },
+    {
+      "test": "Funds deficit routes to gold room",
+      "passed": true
+    },
+    {
+      "test": "Affordable gear preserves 5000 room reserve",
+      "passed": true
+    },
+    {
+      "test": "Insufficient entry money returns to water",
+      "passed": true
+    },
+    {
+      "test": "Already in room continues session",
+      "passed": true
+    },
+    {
+      "test": "Reached target with no next gear returns to guard",
+      "passed": true
+    },
+    {
+      "test": "Room gate level/money (14, 5000)",
+      "passed": true
+    },
+    {
+      "test": "Room gate level/money (15, 4999)",
+      "passed": true
+    },
+    {
+      "test": "Failed teleport never marks hero as inside room",
+      "passed": true
+    },
+    {
+      "test": "Failed teleport backs off before retry",
+      "passed": true
+    },
+    {
+      "test": "Verified teleport starts bounded training session",
+      "passed": true
+    },
+    {
+      "test": "Delivery counter advances only after bottle consumed",
+      "passed": true
+    },
+    {
+      "test": "Movement toward NPC is not a completed delivery",
+      "passed": true
+    }
+  ]
+}
