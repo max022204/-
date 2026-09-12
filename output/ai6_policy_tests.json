@@ -1,5 +1,5 @@
 {
-  "passed": 50,
+  "passed": 58,
   "engine_tested": false,
   "tests": [
     {
@@ -80,6 +80,38 @@
     },
     {
       "test": "Two opening deliveries retained",
+      "passed": true
+    },
+    {
+      "test": "Bot 0 keeps doing opening water until level 15",
+      "passed": true
+    },
+    {
+      "test": "Bot 1 keeps doing opening water until level 15",
+      "passed": true
+    },
+    {
+      "test": "Bot 2 keeps doing opening water until level 15",
+      "passed": true
+    },
+    {
+      "test": "Bot 3 keeps doing opening water until level 15",
+      "passed": true
+    },
+    {
+      "test": "Bot 4 keeps doing opening water until level 15",
+      "passed": true
+    },
+    {
+      "test": "Opening saves 10000 before shopping",
+      "passed": true
+    },
+    {
+      "test": "Opening finishes at level and money thresholds",
+      "passed": true
+    },
+    {
+      "test": "Finished opening does not restart when savings decrease",
       "passed": true
     },
     {

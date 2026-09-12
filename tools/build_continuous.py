@@ -24,7 +24,7 @@ def patch(source):
     grow=function(additions,'CAIGrow')
     helper=additions.replace(grow,'')
     assert 'real array CAIOrderX' not in source,'AI6 already applied'
-    source=source.replace('endglobals','boolean array CAIBossRole\nunit array CAIOrderUnit\nreal array CAIOrderX\nreal array CAIOrderY\nunit array CAIAttackTarget\nreal array CAILastX\nreal array CAILastY\nreal array CAIStuck\nendglobals',1)
+    source=source.replace('endglobals','boolean array CAIOpeningDone\nboolean array CAIBossRole\nunit array CAIOrderUnit\nreal array CAIOrderX\nreal array CAIOrderY\nunit array CAIAttackTarget\nreal array CAILastX\nreal array CAILastY\nreal array CAIStuck\nendglobals',1)
     source=source.replace('function CAIFindEnemy takes',helper+'\nfunction CAIFindEnemy takes',1)
     source=source.replace('function CAICast takes',Path('tools/boss_ai.j').read_text('utf-8')+'\nfunction CAICast takes',1)
     update('CAIPrepare','''function CAIPrepare takes nothing returns nothing

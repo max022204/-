@@ -37,9 +37,17 @@ endif
 // An original-map teleport or revival invalidates the saved room.
 set CAIRoom[pid]=0
 endif
-if CAIHas(h,'bzbe') or CAIHas(h,'bzbf') or CAIWaterDone[pid]<2 then
+if CAIHas(h,'bzbe') or CAIHas(h,'bzbf') then
 set CAIMode[pid]="water"
 return CAIWater(h)
+endif
+// Finish the opening economy through real water deliveries before shopping.
+if not CAIOpeningDone[pid] then
+if CAIWaterDone[pid]<2 or GetHeroLevel(h)<15 or gold<10000 then
+set CAIMode[pid]="opening water: level 15 / gold 10000"
+return CAIWater(h)
+endif
+set CAIOpeningDone[pid]=true
 endif
 // Keep AI5's real-material forging, pet transfers, loot and item-use logic.
 if CAIEquipmentDelivery(h) then

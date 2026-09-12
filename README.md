@@ -5,6 +5,7 @@
 - 原三名守城：柱間、我愛羅、六道斑。
 - 新增兩名 BOSS 爆發：邁特凱、飛段；優先攻擊進攻主城的 BOSS，普通兵保留大招。
 - 有敵軍先防守，清場後五人持續賺錢、練等、升級及合成；波次能力達標不再停工。
+- 五人開局先送水：至少完成兩趟，達到 15 級且持有 10000 金幣後，再轉入購裝與刷房；途中仍隨時回防。
 - 保留 AI5 裝備路線、寶寶代管、實際材料合成、強化、融合與鏡像挑戰。最終裝備仍需原圖材料、稱號與任務條件。
 
 詳見 [AI6 五人守城與 BOSS 更新](output/分析報告/06_AI6五人守城與BOSS.md) 及 [完整地圖分析索引](output/分析報告/00_閱讀與使用.md)。目前完成離線驗證，尚未遊戲內完整通關測試。
@@ -31,6 +32,18 @@ python tools/verify_ai6.py
 - `tools/test_ai6.py`：執行實際 JASS 決策的離線情境測試。
 - `tools/verify_ai6.py`：封裝、來源完整性、原有函式與語法驗證。
 
-`tools/build.py`、`castle_ai.j`、`growth_ai.j` 等是先前 AI3 版本的建置工具，保留供歷史分析。最新 AI6 使用上面的建置指令。
+`tools/build.py`、`castle_ai.j`、`growth_ai.j` 等是先前 AI3 版本的建置工具，保留供歷史分析。AI6 使用上面的建置指令。
+
+## AI8 八人守城版
+
+新增八人編制：柱間、兜輔助；我愛羅、白控場；六道斑清場；凱、飛段爆發；丁次坦克。開局先送水，守城優先，空檔買裝升級、採集合成石、訓練與挑戰鏡像，安全時參加沙灘奪寶。詳見 [八人分工與成長草稿](output/分析報告/07_AI8八人分工與成長草稿.md)。
+
+```powershell
+python tools/prepare_ai8.py
+tools/pjass.exe extracted/Scripts_common.j extracted/Scripts_Blizzard.j output/war3map_ai8.j
+python tools/test_ai8.py
+```
+
+準備程式需已有 `output/backups/ai5_script.j` 及 `output/backups/AI5_baseline.w3x`，只產生 JASS、大廳設定與清單。執行 `python tools/package_ai8.py` 才會封裝為 `output/000羈絆7.3.7_AI版_八人守城.w3x`。已通過語法檢查、57 個離線情境及 645 項資源比對，尚未遊戲實測。保留兩個真人位、八個電腦位。
 
 原始／修改地圖、解包資源、備份與第三方執行檔保留本機，不納入 Git。報告中指向這些檔案的連結需本機資料才能開啟。

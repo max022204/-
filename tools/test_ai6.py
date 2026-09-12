@@ -63,7 +63,7 @@ def environment(**kw):
        'CAIAlive':lambda h:h is not None and h.get('life',1)>0,
        'IsUnitHidden':lambda h:h.get('hidden',False),
        'R2I':int,'ModuloInteger':lambda a,b:a%b}
-    for n,val in [('CAIMirrorSlot',0),('CAIRoom',0),('CAIWaterDone',2),('CAIRoomRetry',0.),('CAIQuiet',5.),
+    for n,val in [('CAIOpeningDone',False),('CAIMirrorSlot',0),('CAIRoom',0),('CAIWaterDone',2),('CAIRoomRetry',0.),('CAIQuiet',5.),
                   ('CAIBusy',0.),('CAIRecover',False),('CAIStuck',0.),('CAILastX',0.),('CAILastY',0.),
                   ('CAIOrderX',0.),('CAIOrderY',0.),('CAIOrderUnit',None),('CAIAttackTarget',None)]:e[n]={i:val for i in range(10)}
     exec(compiled,e);e.update(kw);return e
@@ -100,6 +100,11 @@ check('Insufficient room fee does water',policy(hero(gold=4999))[0]==['water'])
 check('Early level does water',policy(hero(level=14,gold=0))[0]==['water'])
 for bottle in ['bzbe','bzbf']:check('Finish bottle '+bottle,policy(hero(items={bottle}))[0]==['water'])
 check('Two opening deliveries retained',policy(hero(),CAIWaterDone={0:0})[0]==['water'])
+for pid in range(5):
+    check('Bot '+str(pid)+' keeps doing opening water until level 15',policy(hero(pid,level=14,gold=100000))[0]==['water'])
+check('Opening saves 10000 before shopping',policy(hero(level=15,gold=9999))[0]==['water'])
+check('Opening finishes at level and money thresholds',policy(hero(level=15,gold=10000))[1]['CAIOpeningDone'][0])
+check('Finished opening does not restart when savings decrease',policy(hero(gold=9000),CAIOpeningDone={0:True})[0]==['gear'])
 check('Revived outside room clears stale assignment',policy(hero(),CAIRoom={0:1})[1]['CAIRoom'][0]==0)
 check('Actual room occupant continues farming',policy(hero(x=1545.6,y=4344.2),CAIRoom={0:1})[0]==['farm'])
 check('Active mirror fight continues',policy(hero(),CAIMirrorSlot={0:1})[0]==['mirror'])

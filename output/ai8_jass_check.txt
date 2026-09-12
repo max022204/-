@@ -1,4 +1,4 @@
 Parse successful:     2542 lines: extracted/Scripts_common.j
 Parse successful:    10252 lines: extracted/Scripts_Blizzard.j
-Parse successful:    97253 lines: output/war3map_ai6.j
-Parse successful:   110047 lines: <total>
+Parse successful:    97523 lines: output/war3map_ai8.j
+Parse successful:   110317 lines: <total>
