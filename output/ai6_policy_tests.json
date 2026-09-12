@@ -1,0 +1,206 @@
+{
+  "passed": 50,
+  "engine_tested": false,
+  "tests": [
+    {
+      "test": "Five default computer players controlled",
+      "passed": true
+    },
+    {
+      "test": "Original three slots remain defenders",
+      "passed": true
+    },
+    {
+      "test": "Two added slots have boss roles",
+      "passed": true
+    },
+    {
+      "test": "Even ten configured computers never exceed five controlled bots",
+      "passed": true
+    },
+    {
+      "test": "Custom computer slots still allocate two specialists",
+      "passed": true
+    },
+    {
+      "test": "Human slots are never controlled",
+      "passed": true
+    },
+    {
+      "test": "Two strongest role preferences are Kai and Hidan",
+      "passed": true
+    },
+    {
+      "test": "Defender preferences unchanged",
+      "passed": true
+    },
+    {
+      "test": "Boss selection reserves defender heroes",
+      "passed": true
+    },
+    {
+      "test": "Wave strength never stops saving 1.0",
+      "passed": true
+    },
+    {
+      "test": "Wave strength never stops saving 100000000.0",
+      "passed": true
+    },
+    {
+      "test": "Affordable equipment precedes training",
+      "passed": true
+    },
+    {
+      "test": "No available recipe keeps earning for final gear",
+      "passed": true
+    },
+    {
+      "test": "Funded fusion budget keeps training",
+      "passed": true
+    },
+    {
+      "test": "Max level continues earning instead of useless XP",
+      "passed": true
+    },
+    {
+      "test": "Insufficient room fee does water",
+      "passed": true
+    },
+    {
+      "test": "Early level does water",
+      "passed": true
+    },
+    {
+      "test": "Finish bottle bzbe",
+      "passed": true
+    },
+    {
+      "test": "Finish bottle bzbf",
+      "passed": true
+    },
+    {
+      "test": "Two opening deliveries retained",
+      "passed": true
+    },
+    {
+      "test": "Revived outside room clears stale assignment",
+      "passed": true
+    },
+    {
+      "test": "Actual room occupant continues farming",
+      "passed": true
+    },
+    {
+      "test": "Active mirror fight continues",
+      "passed": true
+    },
+    {
+      "test": "Crafted equipment delivery is retained",
+      "passed": true
+    },
+    {
+      "test": "Equipment lumber gate retained",
+      "passed": true
+    },
+    {
+      "test": "All five grow after later waves clear",
+      "passed": true
+    },
+    {
+      "test": "wave recalls all five",
+      "passed": true
+    },
+    {
+      "test": "countdown recalls all five",
+      "passed": true
+    },
+    {
+      "test": "local enemy recalls all five",
+      "passed": true
+    },
+    {
+      "test": "Hold suppresses all growth",
+      "passed": true
+    },
+    {
+      "test": "Damaged clear castle does not cause permanent idle",
+      "passed": true
+    },
+    {
+      "test": "Clear debounce prevents instant departure",
+      "passed": true
+    },
+    {
+      "test": "Fighting a nearby boss does not rubber-band to castle",
+      "passed": true
+    },
+    {
+      "test": "E020 saves burst on ordinary creeps",
+      "passed": true
+    },
+    {
+      "test": "E020 opens boss burst with self buff",
+      "passed": true
+    },
+    {
+      "test": "E06N saves burst on ordinary creeps",
+      "passed": true
+    },
+    {
+      "test": "E06N opens boss burst with self buff",
+      "passed": true
+    },
+    {
+      "test": "Above-wave stats never end room 1",
+      "passed": true
+    },
+    {
+      "test": "Above-wave stats never end room 2",
+      "passed": true
+    },
+    {
+      "test": "invulnerable enemy never locks growth",
+      "passed": true
+    },
+    {
+      "test": "hidden enemy never locks growth",
+      "passed": true
+    },
+    {
+      "test": "dead enemy never locks growth",
+      "passed": true
+    },
+    {
+      "test": "structure enemy never locks growth",
+      "passed": true
+    },
+    {
+      "test": "Live attack unit still interrupts growth",
+      "passed": true
+    },
+    {
+      "test": "Main boss prioritized over nearer minor boss",
+      "passed": true
+    },
+    {
+      "test": "Invulnerable boss skipped",
+      "passed": true
+    },
+    {
+      "test": "Same active attack not restarted",
+      "passed": true
+    },
+    {
+      "test": "Interrupted attack restarts",
+      "passed": true
+    },
+    {
+      "test": "Identical active movement not restarted",
+      "passed": true
+    },
+    {
+      "test": "Pet movement not suppressed by hero order cache",
+      "passed": true
+    }
+  ]
+}

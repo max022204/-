@@ -4,6 +4,8 @@ __pycache__/
 /extracted/
 /output/backups/
 /output/war3map_ai.j
+/output/war3map_ai6.j
+/output/war3map_ai6.w3i
 /output/war3map_ai.w3i
 /output/growth_policy_test_translation.py
 /tools/stormlib/
